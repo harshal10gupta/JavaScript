@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes And Objects</title>
+</head>
+
+<body>
+    <script>
+        class RailwayForm {
+            submit() {
+                alert(this.name + ": Your form is submitted for train number: " + this.trainno)
+            }
+            cancel() {
+                alert(this.name + ": This form is cancelled for train number: " + this.trainno)
+            }
+            fill(givenname, trainno) {
+                this.name = givenname
+                this.trainno = trainno
+            }
+        }
+
+        let harshalForm = new RailwayForm()
+        harshalForm.fill("harshal", 145316)
+
+        let rohanForm1 = new RailwayForm()
+        let rohanForm2 = new RailwayForm()
+        rohanForm1.fill("Rohan", 222420)
+        rohanForm2.fill("Rohan", 2229211)
+
+        harshalForm.submit()
+        rohanForm1.submit()
+        rohanForm2.submit()
+        rohanForm1.cancel()
+    </script>
+</body>
+
+</html>
